@@ -19,3 +19,12 @@
   }
 }
 ```
+
+### automate formatting
+
+install [stylefmt](https://github.com/morishitter/stylefmt). Given that we'll be working with the above config options, only the items below are supported by **stylefmt**.
+
+shorthand-property-no-redundant-values
+length-zero-no-unit
+color-hex-case
+color-hex-length
