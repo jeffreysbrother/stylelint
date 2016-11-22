@@ -29,12 +29,16 @@
 	3.5	Contact page
 	3.6 Product detail page
 	3.7 Return Policy page
+	3.8 Password Reset page
 */
 
 
 /* 1.x - General */
 	body {
 		background:#ddd;
+	}
+	.main-layout.common-inner > .nm-page-wrap {
+		min-height: calc(100vh - 470px);
 	}
 
 /* 1.1 - Fonts */
@@ -225,7 +229,7 @@
 	}
 	.nm-footer-bar-social li {
 	    float: left;
-	    padding-left: 40px;
+	    padding-left: 13%;
 	}
 
 /* 2.1 - category*/
@@ -1377,7 +1381,7 @@ ul li.widget_nav_menu {
 	height: 50px !important;
 }
 
-
+}
 
 @media only screen and (max-width:479px) {
 	.blog.paged .blog-inner .nm-blog-pagination .col-xs-12 .nm-blog-prev, .blog.paged .blog-inner .nm-blog-pagination .col-xs-12 .nm-blog-next {
@@ -1604,11 +1608,11 @@ ul li.widget_nav_menu {
     padding:20px 30px 20px 20px !important;
 }
 
-	.fq-form {
+.fq-form {
     width: 100% !important;
 }
-	.admin-bar .nm-header-placeholder {
-    height: 25px !important;
+.admin-bar .nm-header-placeholder {
+    /* height: 25px !important; */
 }
 .nm-product-thumbnails-col{
 	width: 120px;
@@ -1668,7 +1672,7 @@ ul li.widget_nav_menu {
 
 /*product single page start*/
 .nm-header-placeholder, #nm-header, #nm-footer{
-	display:block !important;
+	/*display:block !important;*/
 }
 .label::after {
     content: " :";
@@ -2018,7 +2022,7 @@ ul li.widget_nav_menu {
 
 }
 .admin-bar .nm-header-placeholder {
-    height: 38px!important;
+    /*height: 38px!important;*/
 }
 /*.admin-bar .nm-header { padding-top:39px; }*/
 
@@ -2129,6 +2133,7 @@ ul li.widget_nav_menu {
 {
     padding-top:0;
     margin-bottom:38px;
+	position:relative;
 }
 
 .woocommerce #reviews #comments ol.commentlist li:last-child ,
@@ -2654,12 +2659,12 @@ background: #fff;}
 .press-news{
 	margin-top: 33px;
 	padding: 0px 50px 0px 115px;
-	width: 522px;
+	width;522px;
 }
 .press-media-news{
 	margin-top: 33px;
 	padding: 0px 115px 0px 50px;
-	width: 522px;
+	width;522px;
 }
 .press-news h3{
 	color:#303030;
@@ -3278,6 +3283,11 @@ div#order_review li.tax-rate {
 	border-bottom: 3px solid #fff
 }
 
+/*fix weird radio button thing*/
+#shipping_method li {
+	position: relative;
+}
+
 .payment_methods li {
 	border: 1px solid #e7e7e7;
 	margin-bottom: 8px;
@@ -3312,7 +3322,8 @@ div#order_review li.tax-rate {
 
 .woocommerce-checkout-review-order-table h2,
 .nm-checkout-form h2,
-#payment h2 {
+#payment h2,
+h2#order_review_heading {
     font-weight: 700;
     font-family: 'FlamaCondensed', sans-serif;
     font-size: 40px!important;
@@ -3336,6 +3347,10 @@ a.about_paypal {
 
 .shop_table li .product-details .product-quantity {
 	float: none;
+}
+
+.nm-custom-radio-label:before {
+	top: 8px;
 }
 
 .nm-custom-radio:checked + .nm-custom-radio-label:before {
@@ -3392,9 +3407,12 @@ a.about_paypal {
 
 .wc-amazon-checkout-message.wc-amazon-payments-advanced-populated {
 	margin-bottom: 12px;
+	background: #F6C646;
+    padding: 12px 20px;
 }
 .woocommerce-info.info.wc-amazon-payments-advanced-info {
-	font-size: 16px;
+	font-size: 22px;
+	font-weight: 700;
 }
 
 .nm-checkout-notice a {
@@ -3477,6 +3495,10 @@ ul.nm-shop-notice.woocommerce-error li {
 }
 /*subcategories page end*/
 
+#nm-shop.header-disabled {
+	padding-top: 0;
+}
+
 
 /*3.6 - Product detail page start*/
 @media only screen and (min-width:1024px) and (max-width:1199px) {
@@ -3543,6 +3565,35 @@ margin-top:40px;
 
 /*3.7 Return Policy page end*/
 
+/* 3.8 Password Reset page start */
+.woocommerce-lost-password .status-publish .nm-shop-notice-wrap .woocommerce-message {
+    color: #03a678;
+    margin-bottom: 20px;
+    text-align: center !important;}
+
+.woocommerce-lost-password .status-publish .woocommerce p{font-size: 16px;
+	margin: 20px auto 60px auto;
+	max-width: 800px;
+	text-align: center;
+	width: 100%;
+	line-height: 24.5px;}
+.woocommerce-lost-password .status-publish .woocommerce .form-row.form-row-wide{
+	margin: 0; 
+	text-align:left;
+	margin-top: 40px;
+}
+.woocommerce-lost-password .status-publish .lost_reset_password strong, h2{
+	margin: 10px 0px;
+}
+.woocommerce-lost-password .status-publish .lost_reset_password h2{ 
+	margin-bottom:10px;
+}
+.nm-header-placeholder, #nm-header, #nm-footer, .nm-header-login-menu {
+    display: block !important;
+}
+
+/* 3.8 Password Reset page end */
+
 .nm-post-thumbnail .nm-image-overlay{
 	background: rgba(255, 255, 255, 0.20) !important;
 }
@@ -3608,4 +3659,10 @@ display:none !important;
 	#reviews .commentlist li .comment-text .star-rating {
 		position: absolute;
 	}
+}
+
+/* Hiding 1st shipping options on checkout page */
+.woocommerce-checkout-review-order .shipping.shipping_options_li
+{
+	display: none !important;	
 }
