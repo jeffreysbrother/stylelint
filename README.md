@@ -28,3 +28,11 @@ install [stylefmt](https://github.com/morishitter/stylefmt). Given that we'll be
 - length-zero-no-unit
 - color-hex-case
 - color-hex-length
+
+## Running
+
+To be clear, **stylelint** is the linting tool and **stylefmt** is the formatting tool. The `.stylelintrc` file tells **stylelint** what constitutes an invalid rule, and **stylefmt** which rules to modify.
+
+Run stylelint: `stylelint style.css`
+
+Run stylefmt: `stylefmt [options] input-file [output-file]`
