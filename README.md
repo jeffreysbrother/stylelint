@@ -36,3 +36,7 @@ To be clear, **stylelint** is the linting tool and **stylefmt** is the formattin
 Run stylelint: `stylelint style.css`
 
 Run stylefmt: `stylefmt [options] input-file [output-file]`
+
+## What to expect
+
+Running Stylelint appears to first check for critical syntax errors in the stylesheet. For example, running this command against style.css in this repo produces a **CssSyntaxError** because of an unexpected curly brace...then a couple "unknown word" errors. After fixing these, the CLI tool will list all the lint errors. It also appears to be the case that stylefmt *will not* run without first fixing the critical errors in the stylesheet. It's also important to remember that stylefmt will ONLY fix available items listed in the `.stylelintrc`.
