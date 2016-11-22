@@ -1,3 +1,7 @@
+## Preliminary Notes
+
+Stylefmt is not working. For now, please ignore all reference to stylefmt and simply follow the instructions below to run stylelint (the linting tool).
+
 ## Installation
 
 - install the [stylelint CLI](http://stylelint.io/user-guide/cli/)
@@ -39,4 +43,6 @@ Run stylefmt: `stylefmt [options] input-file [output-file]`
 
 ## What to expect
 
-Running Stylelint appears to first check for critical syntax errors in the stylesheet. For example, running this command against style.css in this repo produces a **CssSyntaxError** because of an unexpected curly brace...then a couple "unknown word" errors. After fixing these, the CLI tool will list all the lint errors. It also appears to be the case that stylefmt *will not* run without first fixing the critical errors in the stylesheet. It's also important to remember that stylefmt will ONLY fix available items listed in the `.stylelintrc`.
+Running Stylelint appears to first check for critical syntax errors in the stylesheet. For example, running this command against style.css in this repo produces a **CssSyntaxError** because of an unexpected curly brace...then a couple "unknown word" errors. After fixing these, the CLI tool will list all the lint errors. It also appears to be the case that stylefmt *will not* run without first fixing the critical errors in the stylesheet.
+
+It's also important to remember that stylefmt will ONLY fix available items listed in the `.stylelintrc`. As mentioned above, this is not working anyway. WTF.
