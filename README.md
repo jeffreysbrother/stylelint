@@ -1,9 +1,9 @@
-### installation
+### Installation
 
 - install the [stylelint CLI](http://stylelint.io/user-guide/cli/)
 - [configure](http://stylelint.io/user-guide/configuration/)
 
-### configuration file (**.stylelintrc**)
+### Example configuration file (**.stylelintrc**)
 
 ```json
 {
@@ -20,11 +20,11 @@
 }
 ```
 
-### automate formatting
+### Automate formatting
 
 install [stylefmt](https://github.com/morishitter/stylefmt). Given that we'll be working with the above config options, only the items below are supported by **stylefmt**.
 
-shorthand-property-no-redundant-values
-length-zero-no-unit
-color-hex-case
-color-hex-length
+- shorthand-property-no-redundant-values
+- length-zero-no-unit
+- color-hex-case
+- color-hex-length
