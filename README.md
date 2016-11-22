@@ -1,9 +1,9 @@
-### Installation
+## Installation
 
 - install the [stylelint CLI](http://stylelint.io/user-guide/cli/)
 - [configure](http://stylelint.io/user-guide/configuration/)
 
-### Example configuration file (**.stylelintrc**)
+## Example configuration file (**.stylelintrc**)
 
 ```json
 {
@@ -20,7 +20,7 @@
 }
 ```
 
-### Automate formatting
+## Automate formatting
 
 install [stylefmt](https://github.com/morishitter/stylefmt). Given that we'll be working with the above config options, only the items below are supported by **stylefmt**.
 
